@@ -1,0 +1,213 @@
+//color
+$primary-color: #FAF8F0;
+
+//Sizes
+$tablet: 768px;
+$mobile: 375px;
+
+*, *, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-width: 950px;
+}
+
+.dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity .5s ease;
+  &.active {
+    opacity: 1;
+  }
+}
+
+.warpp {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu {
+  &__list {
+    display: flex;
+/*    @media (max-width: $tablet) {
+      flex-direction: column;
+    }*/
+  }
+  &__content {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 38px;
+      padding-right: 38px;
+    }
+/*    @media (max-width: $tablet) {
+      margin-right: 0 !important;
+      //padding-right: 0;
+      padding: 20px;
+      &:nth-child(n+3) {
+        display: none;
+      }
+      transition: background-color .2s ease, border-color .2s ease;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      &:last-child {
+        border-bottom-color: transparent;
+      }
+    }*/
+    &:hover {
+      .sub-menu__list {
+        display: block;
+      }
+      .menu__content .drop:after {
+        transform: translateY(-50%) rotate(- 90deg);
+      }
+    }
+    &.drop:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transition: transform .2s ease;
+      transform: translateY(-50%) rotate(90deg);
+      background: url("../images/icon-drop.svg");
+      width: 6px;
+      height: 6px;
+/*      @media (max-width: $tablet) {
+        display: none;
+      }*/
+    }
+  }
+  &__link {
+    color: #FAFAFA;
+    @include font(18px,24px);
+    transition: color .2s ease;
+    &.active {
+      color: #EB5757;
+    }
+  }
+}
+
+.sub-menu {
+  &__list {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 320px;
+    display: none;
+    padding-top: 24px;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 47px;
+      width: 24px;
+      height: 24px;
+      border: 24px solid transparent;
+      border-bottom-color: #252830;
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+  }
+  &__content {
+    position: relative;
+    background-color: #252830;
+    padding: 8px 38px 8px 18px;
+    transition: background-color .2s ease, border-color .2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    &:last-child {
+      border-bottom-color: transparent;
+    }
+    &:hover {
+      background-color: #131417;
+      border-bottom-color: #131417;
+      .sub-sub-menu__list {
+        display: block;
+      }
+      .sub-menu__content .drop:after {
+        transform: translateY(-50%) rotate(- 90deg);
+      }
+    }
+    &.drop:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transition: transform .2s ease;
+      transform: translateY(-50%);
+      background: url("../images/icon-drop.svg");
+      width: 6px;
+      height: 6px;
+    }
+    &:last-child {
+      border-radius: 0 0 8px 8px;
+    }
+  }
+  &__link {
+    color: #FAFAFA;
+    @include font(16px,24px);
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+}
+
+.sub-sub-menu {
+  &__list {
+    position: absolute;
+    top: -41px;
+    left: 100%;
+    transform: translateX(22px);
+    width: 185px;
+    display: none;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 41px;
+      left: -15px;
+      width: 20px;
+      height: 20px;
+      border: 20px solid transparent;
+      border-right-color: #252830;
+      z-index: -1;
+      transform: translateX(-50%);
+    }
+  }
+  &__content {
+    background-color: #252830;
+    padding: 8px 18px 8px 17px;
+    transition: background-color .2s ease, border-color .2s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    &:hover {
+      background-color: #131417;
+      border-bottom-color: #131417;
+    }
+    &:first-child {
+      border-radius: 8px 8px 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 8px 8px;
+    }
+  }
+  &__link {
+    color: #FAFAFA;
+    @include font(16px,24px);
+    display: inline-block;
+  }
+}
