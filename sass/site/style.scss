@@ -25,13 +25,14 @@ body {
 }
 
 .dark {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
+  pointer-events: none;
   transition: opacity .5s ease;
   &.active {
     opacity: 1;
@@ -46,9 +47,9 @@ body {
 .menu {
   &__list {
     display: flex;
-/*    @media (max-width: $tablet) {
+    @media (max-width: $tablet) {
       flex-direction: column;
-    }*/
+    }
   }
   &__content {
     position: relative;
@@ -56,7 +57,7 @@ body {
       margin-right: 38px;
       padding-right: 38px;
     }
-/*    @media (max-width: $tablet) {
+    @media (max-width: $tablet) {
       margin-right: 0 !important;
       //padding-right: 0;
       padding: 20px;
@@ -68,13 +69,15 @@ body {
       &:last-child {
         border-bottom-color: transparent;
       }
-    }*/
+    }
     &:hover {
-      .sub-menu__list {
-        display: block;
-      }
-      .menu__content .drop:after {
-        transform: translateY(-50%) rotate(- 90deg);
+      @media (min-width: $tablet) {
+        .sub-menu__list {
+          display: block;
+        }
+        .menu__content .drop:after {
+          transform: translateY(-50%) rotate(- 90deg);
+        }
       }
     }
     &.drop:after {
@@ -87,16 +90,16 @@ body {
       background: url("../images/icon-drop.svg");
       width: 6px;
       height: 6px;
-/*      @media (max-width: $tablet) {
-        display: none;
-      }*/
+      @media (max-width: $tablet) {
+        //display: none;
+      }
     }
   }
   &__link {
     color: #FAFAFA;
     @include font(18px,24px);
     transition: color .2s ease;
-    &.active {
+    &:hover {
       color: #EB5757;
     }
   }
@@ -121,6 +124,18 @@ body {
       border-bottom-color: #252830;
       z-index: 1;
       transform: translateY(-50%);
+    }
+    @media (max-width: $tablet) {
+      //position: absolute;
+      padding-top: 0;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: auto;
+      display: block;
+      &:after {
+        display: none;
+      }
     }
   }
   &__content {
@@ -148,13 +163,18 @@ body {
       top: 50%;
       right: 15px;
       transition: transform .2s ease;
-      transform: translateY(-50%);
+      transform: translateY(-50%) rotate(-90deg);
       background: url("../images/icon-drop.svg");
       width: 6px;
       height: 6px;
     }
     &:last-child {
       border-radius: 0 0 8px 8px;
+    }
+    @media (max-width: $tablet) {
+      padding: 20px;
+      border-radius: 0;
+
     }
   }
   &__link {
@@ -188,6 +208,18 @@ body {
       z-index: -1;
       transform: translateX(-50%);
     }
+    @media (max-width: $tablet) {
+      position: absolute;
+      padding-top: 0;
+      top: 100%;
+      left: 0;
+      right: 0;
+      width: auto;
+      display: block;
+      &:after {
+        display: none;
+      }
+    }
   }
   &__content {
     background-color: #252830;
@@ -202,7 +234,13 @@ body {
       border-radius: 8px 8px 0 0;
     }
     &:last-child {
-      border-radius: 0 0 8px 8px;
+      border-bottom-color: transparent;
+      border-radius: 0 0 18px 18px;
+    }
+    @media (max-width: $tablet) {
+      padding: 20px;
+      border-radius: 0 !important;
+
     }
   }
   &__link {
