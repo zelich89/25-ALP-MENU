@@ -89,7 +89,7 @@ body {
       &.active {
         background-color: #131417;
         &.drop:after {
-          transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(180deg);
         }
         .sub-menu__list {
           display: block;
@@ -112,7 +112,7 @@ body {
       top: 50%;
       right: 20px;
       transition: transform .2s ease;
-      transform: translateY(-50%) rotate(-90deg);
+      transform: translateY(-50%);
       background: url("../images/icon-drop.svg");
       width: 6px;
       height: 6px;
@@ -204,7 +204,7 @@ body {
       top: 50%;
       right: 15px;
       transition: transform .2s ease;
-      transform: translateY(-50%) rotate(-90deg);
+      transform: translateY(-50%) rotate(90deg);
       background: url("../images/icon-drop.svg");
       width: 6px;
       height: 6px;
