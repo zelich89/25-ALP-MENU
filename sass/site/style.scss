@@ -45,8 +45,11 @@ body {
   opacity: 0;
   pointer-events: none;
   transition: opacity .5s ease;
-  &.active {
+
+  @media (max-width: $tablet) {
+    &.active {
     opacity: 1;
+    }
   }
 }
 
