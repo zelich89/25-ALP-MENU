@@ -21,6 +21,7 @@
 
 <div class="dark active"></div>
 
+
 <header class="header header--theme">
     <div class="header__warpp warpp">
         <div class="header__logo logo">
@@ -31,7 +32,7 @@
                 <li class="menu__content">
                     <a href="" class="menu__link">Главная</a>
                 </li>
-                <li class="menu__content drop">
+                <li class="menu__content active drop js-menu__content">
                     <a href="" class="menu__link">Основное меня</a>
                     <ul class="sub-menu__list">
                         <li class="sub-menu__content">
@@ -43,7 +44,7 @@
                         <li class="sub-menu__content">
                             <a href="" class="sub-menu__link">Хочу работать у вас</a>
                         </li>
-                        <li class="sub-menu__content active drop">
+                        <li class="sub-menu__content active drop js-sub-menu__content">
                             <a href="" class="sub-menu__link">Есть предложение по работе с клиентами</a>
                             <ul class="sub-sub-menu__list">
                                 <li class="sub-sub-menu__content">
@@ -64,14 +65,16 @@
                 </li>
             </ul>
         </div>
-        <a class="header__phone" href="tel:+1 (321) 222 - 33 -33">
-            <img class="header__pic" src="images/phone.svg" alt="">
-            +1 (321) 222 - 33 -33
-        </a>
-        <div class="header__burger">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="header__part">
+            <a class="header__phone" href="tel:+1 (321) 222 - 33 -33">
+                <img class="header__pic" src="images/phone.svg" alt="">
+                <span class="header___num">+1 (321) 222 - 33 -33</span>
+            </a>
+            <div class="header__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </div>
 </header>
@@ -79,5 +82,13 @@
 <div class="main-sect">
     <img class="main-sect__image" src="images/alpaca.png" alt="">
 </div>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+</script>
+
+<!--<script src="js/script.js"></script>-->
 </body>
 </html>

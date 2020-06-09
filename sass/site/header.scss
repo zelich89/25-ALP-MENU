@@ -1,7 +1,11 @@
 .header {
+  & * {
+    z-index: 5;
+  }
 
   &__warpp {
     display: flex;
+    //display: inline-flex;
     align-items: center;
     justify-content: space-between;
     padding: 17px 0;
@@ -13,11 +17,10 @@
     padding-left: 100px;
     @media (max-width: 1200px) {
       padding-left: 0;
-
     }
     @media (max-width: $tablet) {
       position: fixed;
-      top: 81px;
+      top: 80px;
       right: 0;
       bottom: 0;
       width: 374px;
@@ -28,6 +31,13 @@
       background-color: #131417;
       padding-left: 0;
     }
+    @media (max-width: $mobile) {
+      width: auto;
+      left: 0;
+    }
+  }
+  &__part {
+    display: flex;
   }
   &__phone {
     display: flex;
@@ -51,6 +61,12 @@
       &:not(:last-child) {
         margin-bottom: 4px;
       }
+    }
+  }
+  &___num {
+    @media (max-width: $mobile) {
+      display: none;
+
     }
   }
   &--theme {
