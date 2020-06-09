@@ -32,7 +32,7 @@ a, a:hover, a:visited {
 
 body {
   font-family: 'Roboto', sans-serif;
-  min-width: 950px;
+  //min-width: 950px;
 }
 
 .dark {
@@ -70,6 +70,9 @@ body {
     &:not(:last-child) {
       margin-right: 38px;
       padding-right: 38px;
+      @media (max-width: 900px) {
+        margin-right: 19px;
+      }
     }
     @media (max-width: $tablet) {
       margin-right: 0 !important;

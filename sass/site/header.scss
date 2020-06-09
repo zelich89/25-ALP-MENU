@@ -13,6 +13,11 @@
       padding: 17px 22px;
     }
   }
+  &__logo {
+    @media (max-width: $mobile) {
+      flex-grow: 1 ;
+    }
+  }
   &__menu {
     padding-left: 100px;
     @media (max-width: 1200px) {
@@ -48,6 +53,9 @@
   }
   &__pic {
     margin-right: 13px;
+    @media (max-width: $mobile) {
+      margin-right: 30px;
+    }
   }
   &__burger {
     display: none;
