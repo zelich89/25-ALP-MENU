@@ -136,15 +136,15 @@ body {
 .sub-menu {
   &__list {
     position: absolute;
-    top: 28px;
+    top: 0;
     left: 0;
     width: 320px;
     display: none;
-    padding-top: 24px;
+    padding-top: 52px;
     &:after {
       content: '';
       position: absolute;
-      top: -4px;
+      top: 24px;
       left: 47px;
       border: 14px solid transparent;
       //border-bottom-color: red;
@@ -236,20 +236,20 @@ body {
     position: absolute;
     top: -41px;
     left: 100%;
-    transform: translateX(22px);
-    width: 185px;
+    //transform: translateX(22px);
+    padding-left: 22px;
     display: none;
     &:after {
       content: '';
       position: absolute;
       top: 41px;
-      left: -14px;
+      left: 0;
       border: 14px solid transparent;
       border-left: none;
       border-right-color: #252830;
       //border-right-color: orangered;
       z-index: -1;
-      //transform: translateX(-50%);
+      transform: translateX(60%);
     }
     @media (max-width: $tablet) {
       position: absolute;
@@ -266,6 +266,7 @@ body {
     }
   }
   &__content {
+    width: 185px;
     background-color: #252830;
     padding: 8px 18px 8px 17px;
     transition: background-color .2s ease, border-color .2s ease;
