@@ -88,7 +88,7 @@ body {
       }
       &.active {
         background-color: #131417;
-        &.drop:after {
+        & .drop:after {
           transform: translateY(-50%) rotate(180deg);
         }
         .sub-menu__list {
@@ -113,12 +113,9 @@ body {
       right: 20px;
       transition: transform .2s ease;
       transform: translateY(-50%);
-      background: url("../images/icon-drop.svg");
-      width: 6px;
-      height: 6px;
-      @media (max-width: $tablet) {
-        //display: none;
-      }
+      border: 3px solid transparent;
+      border-bottom-width: 6px;
+      border-bottom-color: #f2994a;
     }
   }
   &__link {
@@ -146,12 +143,12 @@ body {
       position: absolute;
       top: 24px;
       left: 47px;
-      border: 14px solid transparent;
-      //border-bottom-color: red;
-      border-bottom-color: #252830;
-      //border-top: none;
       z-index: 1;
       pointer-events: none;
+      border: 14px solid transparent;
+      border-bottom-color: #252830;
+      //border-bottom-color: red;
+      //border-top: none;
       //transform: translateY(-15%);
       //transition: all .2s ease ;
     }
@@ -207,9 +204,9 @@ body {
       right: 20px;
       transition: transform .2s ease;
       transform: translateY(-50%) rotate(90deg);
-      background: url("../images/icon-drop.svg");
-      width: 6px;
-      height: 6px;
+      border: 3px solid transparent;
+      border-bottom-width: 6px;
+      border-bottom-color: #f2994a;
     }
     &:last-child {
       border-radius: 0 0 8px 8px;
@@ -219,9 +216,9 @@ body {
       border-radius: 0 !important;
       &.drop:after {
         transform: translateY(-50%);
-        background: url("../images/icon-drop.svg");
-        width: 6px;
-        height: 6px;
+        border: 3px solid transparent;
+        border-bottom-width: 6px;
+        border-bottom-color: #f2994a;
       }
 
     }
@@ -242,7 +239,6 @@ body {
     position: absolute;
     top: -41px;
     left: 100%;
-    //transform: translateX(22px);
     padding-left: 22px;
     display: none;
     &:after {
@@ -253,7 +249,6 @@ body {
       border: 14px solid transparent;
       border-left: none;
       border-right-color: #252830;
-      //border-right-color: orangered;
       z-index: -1;
       transform: translateX(60%);
     }
@@ -264,7 +259,6 @@ body {
       left: -22px;
       right: 0;
       width: auto;
-      //display: block;
       //display: none;
       &:after {
         display: none;
