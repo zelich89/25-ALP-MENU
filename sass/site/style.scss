@@ -147,10 +147,6 @@ body {
       pointer-events: none;
       border: 14px solid transparent;
       border-bottom-color: #252830;
-      //border-bottom-color: red;
-      //border-top: none;
-      //transform: translateY(-15%);
-      //transition: all .2s ease ;
     }
     @media (max-width: $tablet) {
       //position: absolute;
@@ -182,7 +178,7 @@ body {
           display: block;
         }
         .sub-menu__content .drop:after {
-          transform: translateY(-50%) rotate(- 90deg);
+          transform: translateY(-50%) rotate(-90deg);
         }
       }
     }
