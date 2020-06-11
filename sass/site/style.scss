@@ -193,7 +193,7 @@ body {
       @media (max-width: $tablet) {
         background-color: #131417;
         &.drop:after {
-          transform: translateY(-50%) rotate(90deg);
+          transform: translateY(-50%) rotate(180deg);
         }
         .sub-sub-menu__list {
           display: block;
@@ -204,7 +204,7 @@ body {
       content: '';
       position: absolute;
       top: 50%;
-      right: 15px;
+      right: 20px;
       transition: transform .2s ease;
       transform: translateY(-50%) rotate(90deg);
       background: url("../images/icon-drop.svg");
@@ -217,6 +217,12 @@ body {
     @media (max-width: $tablet) {
       padding: 20px;
       border-radius: 0 !important;
+      &.drop:after {
+        transform: translateY(-50%);
+        background: url("../images/icon-drop.svg");
+        width: 6px;
+        height: 6px;
+      }
 
     }
   }
@@ -285,6 +291,7 @@ body {
       border-radius: 0 0 18px 18px;
     }
     @media (max-width: $tablet) {
+      width: 100%;
       padding: 20px;
       border-radius: 0 !important;
     }
